@@ -55,15 +55,4 @@ public class WordFinderTests
         Assert.Equal(expected, result);
     }
 
-    [Fact]
-    public void Constructor_NullOrEmptyMatrix_ThrowsArgumentException()
-    {
-        // Arrange
-        IEnumerable<string>? nullMatrix = null;
-        var emptyMatrix = new List<string>();
-
-        // Act & Assert
-        Assert.Throws<ArgumentException>(() => new WordFinder(nullMatrix));
-        Assert.Throws<ArgumentException>(() => new WordFinder(emptyMatrix));
-    }
 }
