@@ -12,7 +12,10 @@ var wordsToFind = new List<string>
     "cold",
     "wind",
     "snow",
-    "chill"
+    "chill",
+    "chill",
+    "chill",
+    "wind",
 };
 
 
