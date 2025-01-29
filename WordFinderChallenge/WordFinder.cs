@@ -3,19 +3,14 @@ public class WordFinder
     private readonly List<string> rowsAndColumns;
     public WordFinder(IEnumerable<string> matrix)
     {
-        //Add Input Validations
-        // if(matrix.isNullOrEmpty())
-        // {
-        //     throw new ArgumentException("Matrix cannot be null or empty");
-        // }
         rowsAndColumns = [.. matrix, .. WordFinderHelper.GetColumns(matrix)];
     }
 
-    public IEnumerable<string> Find(IEnumerable<string> words)
+    public IEnumerable<string> Find(IEnumerable<string> wordstream)
     {
         var wordCounts = new Dictionary<string, int>();
         
-        foreach(var wordToFind in words)
+        foreach(var wordToFind in wordstream)
         {
             var occurrences = 0;
             foreach(var rowColumn in rowsAndColumns)

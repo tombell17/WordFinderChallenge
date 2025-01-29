@@ -20,7 +20,7 @@ public static class WordFinderHelper
             {
                 colChars[i] = rows.ElementAt(i)[j];
             }
-            result.Add(new string(colChars)); // Convert char array to string
+            result.Add(new string(colChars)); 
         }
 
         return result;
