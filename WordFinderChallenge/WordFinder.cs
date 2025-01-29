@@ -18,7 +18,8 @@ public class WordFinder
                 occurrences += WordFinderHelper.CountWordOccurrences(rowColumn, wordToFind);
             }
 
-            wordCounts.Add(wordToFind, occurrences);
+            if(occurrences > 0)
+                wordCounts.Add(wordToFind, occurrences);
         }
 
         return WordFinderHelper.GetTopTenWords(wordCounts);
